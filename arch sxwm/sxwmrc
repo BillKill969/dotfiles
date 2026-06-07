@@ -1,0 +1,42 @@
+bind : super + d      : "rofi -show drun"
+bind : super + q      : close_window
+bind : super + Return : "alacritty"
+bind : super + alt + q : quit
+bind : super + r       : reload_config
+bind : super + p       : "polybar --reload"
+bind : super + b	: "polybar-msg cmd toggle"
+bind : print      : "scrot 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/screenshots && mv $f ~/screenshots && xclip -selection clipboard -t image/pg -i ~/screenshots/`ls -1 -t ~/screenshots | head -1`'"
+bind : XF86MonBrightnessDown : "brightnessctl set 5%-"
+bind : XF86MonBrightnessUp : "brightnessctl set +5%"
+bind : XF86AudioRaiseVolume : "pactl set-sink-volume 0 +5%"
+bind : XF86AudioLowerVolume : "pactl set-sink-volume 0 -5%"
+
+mod_key : super
+call : mod + Up : move_win_up
+call : mod + Down : move_win_down
+call : mod + Left : move_win_left
+call : mod + Right : move_win_right
+call : mod + f : fullscreen
+
+
+move_window_amount      : 50
+motion_throttle : 60
+master_width            : 50
+gaps : 10
+border_width : 2
+focused_border_colour : #65a5f7
+unfocused_border_colour : #000000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
